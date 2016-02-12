@@ -451,7 +451,7 @@ END GROUP
                 0x10002000                __top_RamLoc8 = 0x10002000
                 0x10002000                __top_RAM = 0x10002000
 
-.text           0x00000000      0xa08
+.text           0x00000000      0xa04
  FILL mask 0xff
                 0x00000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -460,7 +460,7 @@ END GROUP
                 0x000000c0                . = ALIGN (0x4)
                 0x000000c0                __section_table_start = .
                 0x000000c0                __data_section_table = .
-                0x000000c0        0x4 LONG 0xa08 LOADADDR (.data)
+                0x000000c0        0x4 LONG 0xa04 LOADADDR (.data)
                 0x000000c4        0x4 LONG 0x10000000 ADDR (.data)
                 0x000000c8        0x4 LONG 0x0 SIZEOF (.data)
                 0x000000cc                __data_section_table_end = .
@@ -515,117 +515,117 @@ END GROUP
  .text.Chip_GPIO_SetPinToggle
                 0x0000046c       0x5c ./src/mm-test.o
  .text.SysTick_Handler
-                0x000004c8       0x38 ./src/mm-test.o
+                0x000004c8       0x34 ./src/mm-test.o
                 0x000004c8                SysTick_Handler
- .text.main     0x00000500       0x4c ./src/mm-test.o
-                0x00000500                main
+ .text.main     0x000004fc       0x4c ./src/mm-test.o
+                0x000004fc                main
  .text.SystemInit
-                0x0000054c        0xc ./src/sysinit.o
-                0x0000054c                SystemInit
+                0x00000548        0xc ./src/sysinit.o
+                0x00000548                SystemInit
  .text.SystemCoreClockUpdate
-                0x00000558       0x18 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
-                0x00000558                SystemCoreClockUpdate
+                0x00000554       0x18 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(chip_11xx.o)
+                0x00000554                SystemCoreClockUpdate
  .text.Chip_Clock_GetMainOscRate
-                0x00000570       0x14 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x0000056c       0x14 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
  .text.Chip_Clock_GetIntOscRate
-                0x00000584       0x10 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x00000580       0x10 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
  .text.Chip_Clock_GetWDTLFORate
-                0x00000594       0x48 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x00000590       0x48 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
  .text.Chip_Clock_GetPLLFreq
-                0x000005dc       0x24 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x000005d8       0x24 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
  .text.Chip_Clock_SetSystemPLLSource
-                0x00000600       0x2c /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
-                0x00000600                Chip_Clock_SetSystemPLLSource
+                0x000005fc       0x2c /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x000005fc                Chip_Clock_SetSystemPLLSource
  .text.Chip_Clock_SetMainClockSource
-                0x0000062c       0x2c /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
-                0x0000062c                Chip_Clock_SetMainClockSource
+                0x00000628       0x2c /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x00000628                Chip_Clock_SetMainClockSource
  .text.Chip_Clock_GetWDTOSCRate
-                0x00000658       0x1c /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
-                0x00000658                Chip_Clock_GetWDTOSCRate
+                0x00000654       0x1c /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x00000654                Chip_Clock_GetWDTOSCRate
  .text.Chip_Clock_GetSystemPLLInClockRate
-                0x00000674       0x40 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
-                0x00000674                Chip_Clock_GetSystemPLLInClockRate
+                0x00000670       0x40 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x00000670                Chip_Clock_GetSystemPLLInClockRate
  .text.Chip_Clock_GetSystemPLLOutClockRate
-                0x000006b4       0x24 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
-                0x000006b4                Chip_Clock_GetSystemPLLOutClockRate
+                0x000006b0       0x24 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x000006b0                Chip_Clock_GetSystemPLLOutClockRate
  .text.Chip_Clock_GetMainClockRate
-                0x000006d8       0x64 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
-                0x000006d8                Chip_Clock_GetMainClockRate
+                0x000006d4       0x64 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x000006d4                Chip_Clock_GetMainClockRate
  .text.Chip_Clock_GetSystemClockRate
-                0x0000073c       0x24 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
-                0x0000073c                Chip_Clock_GetSystemClockRate
+                0x00000738       0x24 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x00000738                Chip_Clock_GetSystemClockRate
  .text.Chip_Clock_EnablePeriphClock
-                0x00000760       0x30 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(gpio_11xx_2.o)
+                0x0000075c       0x30 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(gpio_11xx_2.o)
  .text.Chip_GPIO_Init
-                0x00000790       0x14 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(gpio_11xx_2.o)
-                0x00000790                Chip_GPIO_Init
+                0x0000078c       0x14 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(gpio_11xx_2.o)
+                0x0000078c                Chip_GPIO_Init
  .text.Chip_FMC_SetFLASHAccess
-                0x000007a4       0x2c /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+                0x000007a0       0x2c /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
  .text.Chip_Clock_SetupSystemPLL
-                0x000007d0       0x34 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+                0x000007cc       0x34 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
  .text.Chip_Clock_IsSystemPLLLocked
-                0x00000804       0x1c /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+                0x00000800       0x1c /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
  .text.Chip_Clock_SetSysClockDiv
-                0x00000820       0x18 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+                0x0000081c       0x18 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
  .text.Chip_Clock_EnablePeriphClock
-                0x00000838       0x30 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+                0x00000834       0x30 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
  .text.Chip_SystemInit
-                0x00000868       0x5c /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
-                0x00000868                Chip_SystemInit
+                0x00000864       0x5c /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysinit_11xx.o)
+                0x00000864                Chip_SystemInit
  .text.Chip_SYSCTL_PowerDown
-                0x000008c4       0x3c /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
-                0x000008c4                Chip_SYSCTL_PowerDown
+                0x000008c0       0x3c /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
+                0x000008c0                Chip_SYSCTL_PowerDown
  .text.Chip_SYSCTL_PowerUp
-                0x00000900       0x40 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
-                0x00000900                Chip_SYSCTL_PowerUp
+                0x000008fc       0x40 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(sysctl_11xx.o)
+                0x000008fc                Chip_SYSCTL_PowerUp
  .text.__weak_main
-                0x00000940        0x8 /usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libcr_c.a(__weak__main.o)
-                0x00000940                __main
-                0x00000940                __weak_main
+                0x0000093c        0x8 /usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libcr_c.a(__weak__main.o)
+                0x0000093c                __main
+                0x0000093c                __weak_main
  .text.__aeabi_division_idivmod
-                0x00000948       0x78 /usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libcr_eabihelpers.a(division_32.o)
-                0x00000948                __aeabi_idiv
-                0x00000948                __aeabi_idivmod
-                0x0000094e                __aeabi_uidiv
-                0x0000094e                __aeabi_uidivmod
+                0x00000944       0x78 /usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libcr_eabihelpers.a(division_32.o)
+                0x00000944                __aeabi_idiv
+                0x00000944                __aeabi_idivmod
+                0x0000094a                __aeabi_uidiv
+                0x0000094a                __aeabi_uidivmod
  .text.__aeabi_division_idiv0
-                0x000009c0        0x2 /usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libcr_eabihelpers.a(division_idiv0.o)
-                0x000009c0                __aeabi_idiv0
+                0x000009bc        0x2 /usr/local/lpcxpresso_8.0.0_526/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libcr_eabihelpers.a(division_idiv0.o)
+                0x000009bc                __aeabi_idiv0
  *(.rodata .rodata.* .constdata .constdata.*)
- *fill*         0x000009c2        0x2 
+ *fill*         0x000009be        0x2 
  .rodata.OscRateIn
-                0x000009c4        0x4 ./src/sysinit.o
-                0x000009c4                OscRateIn
+                0x000009c0        0x4 ./src/sysinit.o
+                0x000009c0                OscRateIn
  .rodata.wdtOSCRate
-                0x000009c8       0x40 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
-                0x00000a08                . = ALIGN (0x4)
+                0x000009c4       0x40 /home/marcel/LPCXpresso/workspace/lpc_chip_11cxx_lib/Debug/liblpc_chip_11cxx_lib.a(clock_11xx.o)
+                0x00000a04                . = ALIGN (0x4)
 
-.glue_7         0x00000a08        0x0
+.glue_7         0x00000a04        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x00000a08        0x0
+.glue_7t        0x00000a04        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x00000a08        0x0
+.vfp11_veneer   0x00000a04        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00000a08        0x0
+.v4_bx          0x00000a04        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00000a08        0x0
+.iplt           0x00000a04        0x0
  .iplt          0x00000000        0x0 ./src/cr_startup_lpc11xx.o
 
-.rel.dyn        0x00000a08        0x0
+.rel.dyn        0x00000a04        0x0
  .rel.iplt      0x00000000        0x0 ./src/cr_startup_lpc11xx.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00000a08                __exidx_start = .
+                0x00000a04                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00000a08                __exidx_end = .
-                0x00000a08                _etext = .
+                0x00000a04                __exidx_end = .
+                0x00000a04                _etext = .
 
 .uninit_RESERVED
                 0x10000000        0x0
@@ -633,7 +633,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000        0x0 load address 0x00000a08
+.data           0x10000000        0x0 load address 0x00000a04
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
@@ -642,10 +642,10 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _edata = .
 
-.igot.plt       0x10000000        0x0 load address 0x00000a08
+.igot.plt       0x10000000        0x0 load address 0x00000a04
  .igot.plt      0x00000000        0x0 ./src/cr_startup_lpc11xx.o
 
-.bss            0x10000000        0xc load address 0x00000a08
+.bss            0x10000000        0xc load address 0x00000a04
                 0x10000000                _bss = .
  *(.bss*)
  .bss.timer1.5693
@@ -658,7 +658,7 @@ END GROUP
                 0x1000000c                _ebss = .
                 0x1000000c                PROVIDE (end, .)
 
-.noinit         0x1000000c        0x0 load address 0x00000a08
+.noinit         0x1000000c        0x0 load address 0x00000a04
                 0x1000000c                _noinit = .
  *(.noinit*)
                 0x1000000c                . = ALIGN (0x4)

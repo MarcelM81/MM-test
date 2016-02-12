@@ -25,7 +25,7 @@ void SysTick_Handler(void)
 {
 	static int timer1;
 
-	if (++timer1 >= 1000) {
+	if (++timer1 >= 200) {
 			timer1 = 0;
 			Chip_GPIO_SetPinToggle(LPC_GPIO, 0, 7);
 		}
